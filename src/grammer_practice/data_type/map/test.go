@@ -65,6 +65,10 @@ func main() {
 	}
 	println(len(m3))
 
+	//make use
+	m1pro := make(map[int]int, 1000)
+	fmt.Println(len(m1pro)) //0
+
 	//fatal error: concurrent map read and map write if don't use RW lock
 	var lock sync.RWMutex
 	m4 := make(map[string]int)
