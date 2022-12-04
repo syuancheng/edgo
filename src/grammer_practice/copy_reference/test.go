@@ -51,4 +51,17 @@ func main() {
 	//u2.family[0] = &t
 	fmt.Printf("u1 pointer: %p, target: %v\n", &u1, u1)
 	fmt.Printf("u2 pointer: %p, target: %v\n", &u2, u2)
+
+	s1 := make([]string, 1, 2)
+	s2 := s1
+	fmt.Printf("s1 pointer: %p, target: %v\n", &s1, s1)
+	fmt.Printf("s2 pointer: %p, target: %v\n", &s2, s2)
+
+	s1 = append(s1, "a")
+	fmt.Printf("new s1 pointer: %p, target: %v\n", &s1, s1)
+	fmt.Printf("new s2 pointer: %p, target: %v\n", &s2, s2)
+
+	s1[0] = "b"
+	fmt.Printf("new s1 pointer: %p, target: %v\n", &s1, s1)
+	fmt.Printf("new s2 pointer: %p, target: %v\n", &s2, s2)
 }
