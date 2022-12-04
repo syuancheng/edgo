@@ -52,6 +52,7 @@ func main() {
 		a, b
 		c, b
 	*/
+
 	b := 1
 	p := &b
 	fmt.Printf("pointer: %p, target: %v\n", &p, p)
@@ -87,5 +88,4 @@ func main() {
 	println(fn(5, 8))
 
 	testStruct()
-
 }
