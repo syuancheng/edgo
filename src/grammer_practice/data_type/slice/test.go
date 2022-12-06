@@ -14,12 +14,12 @@ func main() {
 
 	s3 := make([]int, 2, 2)
 
-	fmt.Printf("s3|poiner: %p, v: %v\n", s3, &s3) //0xc0000ae030, v: &[0 0]
-	s3 = append(s3, 3)
-	fmt.Printf("s3|poiner: %p, v: %v\n", s3, &s3) //0xc0000ba020, v: &[0 0 3]
+	fmt.Printf("s3|poiner: %p, v: %v\n", &s3, s3) // 0xc000096090, v: [0 0]
+	s3 = append(s3, 3, 4)
+	fmt.Printf("s3|poiner: %p, v: %v\n", &s3, s3) // 0xc000096090, v: [0 0 3]
 
 	s4 := make([]int, 1, 2)
-	fmt.Printf("s4|poiner: %p, v: %v\n", s4, &s4) //s4|poiner: 0xc0000160e0, v: &[0]
+	fmt.Printf("s4|poiner: %p, v: %v\n", &s4, s4) //s4|poiner: 0xc0000160e0, v: &[0]
 	s4 = append(s4, 3)
-	fmt.Printf("s4|poiner: %p, v: %v\n", s4, &s4) //s4|poiner: 0xc0000160e0, v: &[0 3]
+	fmt.Printf("s4|poiner: %p, v: %v\n", &s4, s4) //s4|poiner: 0xc0000160e0, v: &[0 3]
 }
