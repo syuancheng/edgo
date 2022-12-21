@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"sync"
 )
 
 type user struct {
@@ -69,28 +68,4 @@ func main() {
 	m1pro := make(map[int]int, 1000)
 	fmt.Println(len(m1pro)) //0
 
-	//fatal error: concurrent map read and map write if don't use RW lock
-	var lock sync.RWMutex
-	m4 := make(map[string]int)
-	go func() {
-		for {
-			lock.Lock()
-			m4["a"] = 1
-			lock.Unlock()
-			//time.Sleep(time.Microsecond)
-		}
-	}()
-
-	go func() {
-		for {
-			lock.RLock()
-			_ = m4["b"]
-			lock.RUnlock()
-			//time.Sleep(time.Microsecond)
-		}
-	}()
-
-	select {}
-
-	//test make cap
 }
