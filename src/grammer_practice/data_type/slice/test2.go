@@ -8,7 +8,7 @@ func main() {
 	x := make([]int, 0, 10)
 	x = append(x, 1, 2, 3)
 	y := append(x, 4)
-	z := append(y, 5)
+	z := append(x, 5)
 	fmt.Println(x) //1,2,3
 	fmt.Println(y) //1,2,3,5
 	fmt.Println(z) //1,2,3,5
