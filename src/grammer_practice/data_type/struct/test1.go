@@ -20,5 +20,5 @@ func main() {
 		x: 2,
 	}
 
-	println(d1 == d2) //不支持，因为map不支持==比较
+	//println(d1 == d2) //不支持，因为map不支持==比较
 }

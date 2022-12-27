@@ -4,7 +4,9 @@ func main() {
 	type attr struct {
 		perm int
 	}
+
 	type mymap map[string]int
+
 	type file struct {
 		attr
 		mymap

@@ -14,6 +14,6 @@ func main() {
 	p.age++
 	p.name += " kuangyi"
 
-	//p1 := &p
-	//*p1.name = "zhao" 不支持
+	p1 := &p
+	//*p1.name = "zhao" //不支持
 }
