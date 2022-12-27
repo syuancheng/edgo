@@ -18,7 +18,7 @@
 
 #### 两种创建方式 Test1
 ```go
-var a []int // a==nil len=0
+var a []int // a==nil len=0, 不可读可append, 遍历不需要check nil
 
 b := []int{} //b!=nil len=0
 
