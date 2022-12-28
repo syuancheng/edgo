@@ -47,11 +47,10 @@ func (f FuncString) String() string {
 }
 
 func main() {
-
+	//0-basic
 	var d data
 
 	//var t tester = d data does not implement tester
-
 	var t tester = &d //只有*data实现了接口的所有数据集
 	t.test()
 	println(t.string())
