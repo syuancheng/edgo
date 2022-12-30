@@ -8,4 +8,5 @@ func main() {
 
 	println(<-c)
 	println(<-c)
+	close(c)
 }

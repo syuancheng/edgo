@@ -23,7 +23,7 @@ func main() {
 		}(i)
 	}
 
-	time.Sleep(time.Second * 1)
+	time.Sleep(time.Second * 1) // sleep to wait ready
 
 	println("Ready? Go!")
 
