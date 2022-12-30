@@ -17,7 +17,6 @@ type Fruit struct {
 
 func main() {
 	
-
 	s := student{"Tom", 1}
 	v := reflect.ValueOf(s)
 	t := v.Type()
