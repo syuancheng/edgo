@@ -5,25 +5,17 @@
 异步模式（有buffer）： 抢夺buffer，发送方要有空buffer可供写入，接收方则要有buffer data可读，不符时 同样加入等待队列，直到有data或位置时被唤醒。
 
 
-
-
 及时用close func关闭通道引发结束通知。
 
-nil：
-自己关闭通道，发送数据引发panic
-从已关闭通道接收数据， 返回已缓冲数据或空值
-无论收发，nil通道都会阻塞
-重复关闭，或关闭nil通道会引发panic
+#### 阻塞：
+- no buffer chan
+- buffer full or empty
+- 读写nil chan 永久阻塞，不是写入或者消费了数据就能解除
 
-阻塞：
-读写nil chan 永久阻塞，不是写入或者消费了数据就能解除
-no buffer chan
-buffer full or empty
-
-panic：
-closed chan 写入
-close nil chan
-close closed chan
+#### panic：
+- send data to closed chan(receive data from closed chan, return buffer data or zero value)
+- close nil chan
+- close closed chan
 
 #### Test
 ok-idom, 只有chan closed，ok=false。
@@ -63,6 +55,18 @@ ok-idom 只有在close的时候会返回false  测试在buffer chan
 #### Test9
 单向chan，WaitGroup，close example
 
+#### Test10
+单向channel不可以逆向操作
+close不能用于接收channel
+不能把单向通道重新转回去
 
 
-Test9:
+#### Test11
+select 语句随机选择一个可用通道做收发操作。
+即使channel closed， select依旧可以收到零值和ok=false
+
+#### Test12
+nil channel, select 会阻塞，这样对应的case就不会被执行了
+
+#### Test13
+select对同一个通道， 也会随机选择执行的
