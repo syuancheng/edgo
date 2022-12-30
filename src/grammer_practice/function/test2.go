@@ -2,22 +2,8 @@ package main
 
 import "fmt"
 
-func test(n int) {
-	fmt.Printf("pointer: %p, target: %v\n", &n, n)
-}
-
-func testPtr(n *int) {
-	fmt.Printf("pointer: %p, target: %v\n", &n, n)
-}
-
 func testChange(a ...int) {
 	fmt.Println(a)
-}
-
-func testReturn(n *int) *int {
-	fmt.Printf("pointer: %p, target: %v\n", &n, n)
-	*n++
-	return n
 }
 
 func testFn(f func()) {
@@ -45,22 +31,6 @@ func testStruct() {
 }
 
 func main() {
-	a := 100
-	fmt.Printf("pointer: %p, target: %v\n", &a, a)
-	test(a)
-	/*
-		a, b
-		c, b
-	*/
-
-	b := 1
-	p := &b
-	fmt.Printf("pointer: %p, target: %v\n", &p, p)
-	testPtr(p)
-	/*
-		a, b
-		c, b
-	*/
 
 	testChange(1, 2, 3)
 	testChange(4)
