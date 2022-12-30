@@ -20,5 +20,5 @@ func main() {
 	a += 100
 	println("main:", a, counter()) // 200, 2
 
-	time.Sleep(time.Second * 3)
+	time.Sleep(time.Second * 2)
 }

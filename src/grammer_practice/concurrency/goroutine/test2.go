@@ -6,7 +6,7 @@ func main() {
 	exit := make(chan struct{})
 
 	go func() {
-		time.Sleep(time.Second)
+		time.Sleep(time.Second * 3)
 		println("goroutine done.")
 
 		close(exit)
