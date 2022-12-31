@@ -12,7 +12,6 @@
 #### basic info
 - 通过指针引用底层数组
 - 设定相关属性，将数据读写操作限定在指定区域内
-
 -----
 - 创建切片无需先创建数组， make函数会自动完成底层数组内存分配
 
@@ -23,6 +22,9 @@ var a []int // a==nil len=0, 不可读可append, 遍历不需要check nil
 b := []int{} //b!=nil len=0
 
 c := make([]int, 2, 10)//len=2 cap=10
+
+d := make([]int, 2)//len=2 cap=2
+
 
 ```
 

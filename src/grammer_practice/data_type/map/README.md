@@ -46,6 +46,7 @@ fmt.Println(val, ok) //"" false
 #### test4
 map中的value不可以直接修改 如: m2[0].x ++. 正确做法是返回整个value，待修改后再设置map键值
 或者使用指针类型
+见： uber_style/interface/style2.go
 
 #### test5
 不是线程安全的

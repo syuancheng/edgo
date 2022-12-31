@@ -35,4 +35,11 @@ func main() {
 	for _, s := range c {
 		fmt.Println(s)
 	}
+
+	d := make([]int, 2)
+	fmt.Println(len(d))
+	fmt.Println(cap(d))
+	fmt.Println(d)
+	d = append(d, 2)
+	fmt.Println(d)
 }
