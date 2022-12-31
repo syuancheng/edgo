@@ -37,6 +37,25 @@ u := struct{
 #### Test4
 ##### 匿名字段
 也叫嵌入字段或嵌入类型
+对于类型为结构体的字段，显示指定时与其他类型没有区别，仅仅代表某种类型的字段。而隐式指定时，原结构体的**字段**和**方法**看起来就像是被**继承**过来一样。
+如下，Cat中嵌入了另一个结构体Animal，此时结构体Animal中的字段和方法会被提升到Cat中，看上去就像是Cat的原生字段和方法。
+```go
+type Animal struct {
+	Name string
+}
+
+func (a *Animal) SetName(name string) {
+	a.Name = name
+}
+
+type Cat struct {
+	Animal
+}
+
+type Dog struct {
+	a Animal
+}
+```
 
 #### Test5
 标签

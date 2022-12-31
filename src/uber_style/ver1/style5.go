@@ -30,5 +30,4 @@ func main() {
 	start := time.Date(2022, 1, 1, 12, 0, 0, 0, time.UTC)
 	end := time.Date(2022, 12, 31, 23, 0, 0, 0, time.UTC)
 	fmt.Println(isActive(now, start, end))
-
 }

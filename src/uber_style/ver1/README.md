@@ -26,3 +26,5 @@ https://github.com/xxjwxc/uber_go_guide_cn#%E5%9C%A8%E8%BE%B9%E7%95%8C%E5%A4%84%
 - 使用 defer 释放资源，诸如文件和锁。
 - 枚举从 1 开始(style5)
 - 在处理时间时始终使用 "time" 包，因为它有助于以更安全、更准确的方式处理这些不正确的假设。(style5)
+
+
