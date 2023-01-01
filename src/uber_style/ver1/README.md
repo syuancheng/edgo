@@ -32,6 +32,12 @@ https://github.com/xxjwxc/uber_go_guide_cn#%E5%9C%A8%E8%BE%B9%E7%95%8C%E5%A4%84%
 #### 变量申明
 如果将变量明确设置为某个值，则应使用短变量声明形式 (:=)。
 ```go
-var s 
+var s = "foo"
+//recommend
+s := "foo"
 ```
+#### var申明
+nil是一个有效的长度为0的slice.
+要判断切片是否为空，使用len(s)==0
+
 
