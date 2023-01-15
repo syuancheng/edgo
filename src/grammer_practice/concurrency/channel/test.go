@@ -8,7 +8,7 @@ import (
 func main() {
 	c := make(chan int)
 
-	close(c)
+	// close(c)
 
 	go func() {
 		x, ok := <-c
@@ -19,6 +19,10 @@ func main() {
 		}
 	}()
 
-	time.Sleep(time.Second * 20)
+	time.Sleep(time.Second * 5)
+
+	close(c)
+
+	time.Sleep(time.Second * 2)
 
 }

@@ -12,7 +12,6 @@ func main() {
 
 	go func() {
 		defer wg.Done()
-
 		for {
 			var (
 				name string
@@ -25,6 +24,8 @@ func main() {
 				name = "a"
 			case x, ok = <-b:
 				name = "b"
+			default:
+				println("default error")
 			}
 
 			if !ok {
@@ -35,7 +36,6 @@ func main() {
 		}
 
 	}()
-
 	go func() {
 		defer wg.Done()
 		defer close(a)

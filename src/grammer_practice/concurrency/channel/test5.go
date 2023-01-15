@@ -17,7 +17,7 @@ func main() {
 		}
 	}()
 
-	time.Sleep(time.Second * 10)
+	time.Sleep(time.Second * 3)
 
 	c <- 1
 	c <- 2
@@ -26,3 +26,9 @@ func main() {
 	close(c)
 	<-done
 }
+/**
+result：
+1
+2
+3
+*/

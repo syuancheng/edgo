@@ -29,4 +29,5 @@ func main() {
 
 	close(ready)
 	wg.Wait()
+	println("done!")
 }

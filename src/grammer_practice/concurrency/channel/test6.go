@@ -12,6 +12,7 @@ func main() {
 		for x := range c {
 			println(x)
 		}
+		println("done")
 	}()
 
 	time.Sleep(time.Second * 5)
@@ -20,6 +21,7 @@ func main() {
 	c <- 2
 	c <- 3
 
+	time.Sleep(time.Second * 5)
 	close(c)
 	<-done
 }

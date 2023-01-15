@@ -2,8 +2,7 @@
 #### basic
 同步模式（无buffer）： 发送和接受双方配对，如果配对失败，置入等待队列，直到另一方出现后才被唤醒。
 
-异步模式（有buffer）： 抢夺buffer，发送方要有空buffer可供写入，接收方则要有buffer data可读，不符时 同样加入等待队列，直到有data或位置时被唤醒。
-
+异步模式（有buffer）： 抢夺buffer，发送方要有空buffer可供写入，接收方则要有buffer data可读，不符时同样加入等待队列，直到有data或位置时被唤醒。
 
 及时用close func关闭通道引发结束通知。
 
@@ -17,8 +16,14 @@
 - close nil chan
 - close closed chan
 
+#### close chan
+- ok-idom, ok=false
+- for-range exit for-loop
+- can receive data from closed chan
+
 #### Test
-ok-idom, 只有chan closed，ok=false。
+ok-idom, 只有chan closed，ok=false,value=zero value
+没有收到消息只会阻塞， ok不为任何值。
 
 #### Test1
 no buffer chan会阻塞
@@ -44,6 +49,7 @@ ok-idom and close
 
 #### Test6
 for-range 接收
+for-range exit for-loop, if close chan
 
 #### Test7
 WaitGroup close
