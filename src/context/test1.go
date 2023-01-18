@@ -41,5 +41,4 @@ func main() {
 	fmt.Println("start.")
 	someHandler()
 	fmt.Println("end.")
-
 }
