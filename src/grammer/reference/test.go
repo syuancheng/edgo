@@ -39,7 +39,8 @@ func main() {
 	*/
 
 	*u2.sex.gender = true
-	fmt.Printf("u1 pointer: %p, target: %v, sex.gender: %v\n", &u1, u1, *u1.sex.gender) //ui gender will be changed
+	//u1 gender will be changed
+	fmt.Printf("u1 pointer: %p, target: %v, sex.gender: %v\n", &u1, u1, *u1.sex.gender) 
 	fmt.Printf("u2 pointer: %p, target: %v, sex.gender: %v\n", &u2, u2, *u2.sex.gender)
 
 	//u2.family = append(u2.family, "qian")
