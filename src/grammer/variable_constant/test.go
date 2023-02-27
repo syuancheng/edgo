@@ -8,7 +8,6 @@ func main() {
 
 	var y bool
 	fmt.Printf("y = %t\n", y)
-
 	var a, b int
 	fmt.Printf("a = %d\n", a)
 	fmt.Printf("b = %d\n", b)
