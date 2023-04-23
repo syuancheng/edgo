@@ -21,3 +21,6 @@ WaitGroup
 错误用例， 直接exit
 add未执行，wait已经退出
 
+
+#### Test6
+当main 方法退出之后， goroutine也会终止执行
