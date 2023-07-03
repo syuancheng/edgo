@@ -6,7 +6,7 @@
 - 指针数组：元素是指针
 - 数组指针：来用来修改数组的元素
 - Go 数组是值类型，赋值和传参都会赋值整个数组数据
-
+gitcheckoutmastergit checkout .git checkgit pull
 
 ### slice
 #### basic info
