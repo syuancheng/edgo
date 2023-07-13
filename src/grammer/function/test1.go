@@ -39,4 +39,9 @@ func main() {
 	fmt.Printf("pointer: %p, target: %v\n", &pc, pc)
 	cr := testReturn(pc)
 	fmt.Printf("pointer: %p, target: %v\n", &cr, cr)
+	/**
+	    a, b
+		c, b
+		d, b
+	*/
 }
