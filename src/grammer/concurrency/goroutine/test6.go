@@ -13,7 +13,7 @@ func doSomething() {
 	a := 100
 
 	go func(x, y int) {
-		time.Sleep(time.Second)
+		time.Sleep(time.Second * 5)
 		println("go:", x, y)
 	}(a, counter()) //100, 1
 
@@ -23,6 +23,10 @@ func doSomething() {
 
 func main() {
 	doSomething()
+
+	for{
+		
+	}
 
 	println("done")
 

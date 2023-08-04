@@ -6,6 +6,9 @@ func main() {
 	var a []int
 	fmt.Println(a == nil) // a==nil
 	fmt.Println(len(a))
+	for i := range a {
+		fmt.Println("test:%d", i)
+	}
 	//fmt.Println(a[0])//panic: runtime error: index out of range [1] with length 0
 
 	b := []int{}
