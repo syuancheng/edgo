@@ -1,6 +1,9 @@
 package main
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 var c int
 
@@ -9,7 +12,7 @@ func counter() int {
 	return c
 }
 
-func doSomething() {
+func doSomething() string {
 	a := 100
 
 	go func(x, y int) {
@@ -19,10 +22,13 @@ func doSomething() {
 
 	a += 100
 	println("main:", a, counter())
+
+	return "doSomething done"
 }
 
 func main() {
-	doSomething()
+	result := doSomething()
+	fmt.Println(result)
 
 	for{
 		
@@ -30,5 +36,5 @@ func main() {
 
 	println("done")
 
-	// time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 2)
 }
