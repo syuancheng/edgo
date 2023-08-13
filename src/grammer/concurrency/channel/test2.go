@@ -1,12 +1,18 @@
 package main
 
+type N int
+
 func main() {
-	c := make(chan int, 3)
+	c := make(chan *N, 1)
+	defer close(c)
 
-	c <- 1
-	c <- 2
+	c <- nil
+
+	var n N = 34
+
+	c <- &n
 
 	println(<-c)
-	println(<-c)
-	close(c)
+	//println(<-c)
+
 }

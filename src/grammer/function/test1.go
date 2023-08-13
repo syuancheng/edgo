@@ -16,6 +16,13 @@ func testReturn(n *int) *int {
 	return n
 }
 
+func testReturnInner() int {
+	res := 56
+	fmt.Printf("pointer: %p, target: %v\n", &res, res)
+
+	return res
+}
+
 func main() {
 	a := 100
 	fmt.Printf("pointer: %p, target: %v\n", &a, a)
@@ -39,4 +46,11 @@ func main() {
 	fmt.Printf("pointer: %p, target: %v\n", &pc, pc)
 	cr := testReturn(pc)
 	fmt.Printf("pointer: %p, target: %v\n", &cr, cr)
+	/**
+	    a, b
+		c, b
+		d, b
+	*/
+	res := testReturnInner()
+	fmt.Printf("pointer: %p, target: %v\n", &res, res)
 }
