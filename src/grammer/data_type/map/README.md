@@ -1,29 +1,20 @@
-### basic info
-key 必须是支持相等运算符的数据类型， 如: 数字，指针，string， 数组，结构体
+# MAP
+## 基本信息
+### key
+- key 必须是支持相等运算符的数据类型，如: 数字，指针，string， 数组，结构体
 
-#### test1:
-map的初始化
-- make 可以提前预留足够的空间， 减少扩容.
+### 初始化
+- make可以提前预留足够的空间， 减少扩容. `m := make(map[string]int, 5)`
 - 匿名初始化
-- var: map 是nil，可读不可写
-```go
-m := make(map[string]int)
-m["a"] = 1
-m["b"] = 2
-
+```
 m2 := map[int]struct {
     x int
-}{
+} {
     1: {x: 100},
     2: {x: 200},
 }
-m3 := map[int]string{
-    1: "a", 
-    2: "b",
-}
-
-m4 := make(map[string]int, 5)
 ```
+- var初始化map 是nil，可读不可写 `var m3 map[int]string`  m3是nil
 
 #### test2
 如果不存在ok=false
