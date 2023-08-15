@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	"github.com/syuancheng/edgo/src/project_study/async"
 
+	lib "github.com/syuancheng/edgo/project_study/async"
 )
 
 
@@ -19,5 +19,4 @@ func main() {
 	rsAsyncFunc := lib.NewAsyncFuncWrapper(ctx, func() (interface{}, error) {
 		return asyncTestFn, nil
 	})
-
 }
