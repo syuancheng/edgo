@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 
-	lib "github.com/syuancheng/edgo/project_study/async"
+	lib "github.com/syuancheng/edgo/project/async"
 )
 
 
