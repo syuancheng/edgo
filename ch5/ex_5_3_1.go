@@ -43,6 +43,7 @@ func main() {
 	fmt.Println(len(d))
 	fmt.Println(cap(d))
 	fmt.Println(d)
+	
 	d = append(d, 2)
 	fmt.Println(d)
 }
