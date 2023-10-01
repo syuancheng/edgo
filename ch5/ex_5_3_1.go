@@ -4,16 +4,16 @@ import "fmt"
 
 func main() {
 	var a []int
-	fmt.Println(a == nil) // a==nil
-	fmt.Println(len(a))
+	fmt.Println(a == nil) //true
+	fmt.Println(len(a)) //0
 	for i := range a {
 		fmt.Println("test:%d", i)
 	}
 	//fmt.Println(a[0])//panic: runtime error: index out of range [1] with length 0
 
 	b := []int{}
-	fmt.Println(b == nil) //b!=nil
-	fmt.Println(len(b))
+	fmt.Println(b == nil) //false
+	fmt.Println(len(b))  //0
 	//fmt.Println(b[0])//panic: runtime error: index out of range [1] with length 0
 
 	c := []struct {

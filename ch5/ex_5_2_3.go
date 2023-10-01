@@ -13,6 +13,7 @@ func main() {
 	a := [...]*int{&x, &y}
 
 	p := &a
+	fmt.Printf("A len=%d\n", len(a))
 	fmt.Printf("%T, %v\n", a, a)
 	fmt.Printf("%T, %v\n", p, p)
 
