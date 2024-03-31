@@ -13,6 +13,7 @@ func main() {
 	a := [...]*int{&x, &y}
 
 	p := &a
+	fmt.Printf("A len=%d\n", len(a))
 	fmt.Printf("%T, %v\n", a, a)
 	fmt.Printf("%T, %v\n", p, p)
 
@@ -33,7 +34,9 @@ func main() {
 	var cb [2]int
 	fmt.Printf("x: %p, %v\n", &b, b)
 	cb = b
-	fmt.Printf("x: %p, %v\n", &cb, cb)
+	cb[0] += 10
+	fmt.Printf("cb: %p, %v\n", &cb, cb)
+	fmt.Printf("b: %p, %v\n", &b, b)
 	/** cb will copy b
 	a   b
 	c   b
