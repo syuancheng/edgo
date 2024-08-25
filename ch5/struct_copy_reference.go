@@ -82,13 +82,17 @@ func main() {
 	o1 := mainObj
 	o2 := mainObj
 
-	// o1.Recommend.Report.Content = proto.String("rcmd content adding")
+	// o1.Recommend.Report.Content = proto.String("rcmd content adding") //请注意区分以下两种方式的区别
+	// *o1.Recommend.Report.Content = "rcmd content adding"
 
 	// o1.Ego.Name = proto.String("ego add") //请注意区分以下两种方式的区别
-	*o1.Ego.Name = "ego add"
+	// *o1.Ego.Name = "ego add"
 
-	fmt.Printf("main pointer: %p\n", mainObj.Ego.Name)
-	fmt.Printf("o1 pointer: %p\n", o1.Ego.Name)
+	// o1.Ads.Name = "ads add" //ads 本身是指针， 所以改动会导致所有三个obj都被改动
+	o1.Ads.Score.Score = 3333
+
+	fmt.Printf("main pointer: %p\n", &mainObj.Ads.Score.Score)
+	fmt.Printf("o1 pointer  : %p\n", &o1.Ads.Score.Score)
 
 	fmt.Println("main:")
 	printObj(mainObj)
