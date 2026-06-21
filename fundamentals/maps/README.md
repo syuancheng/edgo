@@ -15,6 +15,6 @@ Map 是引用底层哈希表的描述符。赋值和传参会复制描述符，�
 运行：
 
 ```bash
-go run ./language/maps
-go test -bench=. -benchmem ./language/maps/benchmark
+go run ./fundamentals/maps
+go test -bench=. -benchmem ./fundamentals/maps
 ```

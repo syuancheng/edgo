@@ -26,5 +26,5 @@ Channel 用于在 goroutine 之间传递值并建立同步关系。发送和接�
 运行示例：
 
 ```bash
-go run ./language/concurrency/channel
+go run ./fundamentals/concurrency/channel
 ```

@@ -14,6 +14,6 @@
 多个 goroutine 并发访问同一变量，且至少一个访问是写操作时，需要 channel、互斥锁或原子操作建立同步。程序“看起来运行正常”不代表没有竞争。
 
 ```bash
-go run ./language/concurrency/goroutine
+go run ./fundamentals/concurrency/goroutine
 go test -race ./...
 ```

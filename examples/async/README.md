@@ -5,6 +5,6 @@
 任务函数本身必须观察创建时传入的 context，取消等待者不会强制终止正在执行的函数。
 
 ```bash
-go run ./examples/async/cmd
+go run ./examples/async/demo
 go test ./examples/async
 ```

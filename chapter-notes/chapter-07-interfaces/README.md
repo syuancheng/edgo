@@ -23,5 +23,5 @@ var _ fmt.Stringer = (*MyType)(nil)
 使用 `value, ok := x.(T)` 安全提取动态值，使用 type switch 处理多种类型。尽量让接口小而聚焦，通常由使用方定义。
 
 ```bash
-go run ./book-notes/ch07-interfaces
+go run ./chapter-notes/chapter-07-interfaces
 ```

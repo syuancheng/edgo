@@ -7,5 +7,5 @@ cgo 允许 Go 调用 C 代码，但会增加构建、交叉编译和运行时边
 运行需要本机 C 编译器和 `CGO_ENABLED=1`：
 
 ```bash
-go run ./language/cgo
+go run ./fundamentals/cgo
 ```

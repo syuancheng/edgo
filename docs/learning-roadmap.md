@@ -4,16 +4,16 @@
 
 ## 1. 语言基础
 
-1. [变量与零值](../language/variables/)
-2. [字符串](../language/strings/)
-3. [数组、切片和结构体](../book-notes/ch05-data/)
-4. [map](../language/maps/)
-5. [函数与闭包](../language/functions/)
-6. [方法和方法集](../language/methods/)
-7. [值语义与引用共享](../language/value-semantics/)
-8. [接口](../book-notes/ch07-interfaces/)
-9. [错误处理](../language/errors/)
-10. [泛型](../language/generics/)
+1. [变量与零值](../fundamentals/variables/)
+2. [字符串](../fundamentals/strings/)
+3. [数组、切片和结构体](../chapter-notes/chapter-05-data/)
+4. [map](../fundamentals/maps/)
+5. [函数与闭包](../fundamentals/functions/)
+6. [方法和方法集](../fundamentals/methods/)
+7. [值语义与引用共享](../fundamentals/value-semantics/)
+8. [接口](../chapter-notes/chapter-07-interfaces/)
+9. [错误处理](../fundamentals/errors/)
+10. [泛型](../fundamentals/generics/)
 
 学习重点不是记住语法，而是能回答：赋值时复制了什么、哪些数据仍然共享、方法集如何决定接口实现、错误由谁补充上下文并处理。
 
@@ -21,9 +21,9 @@
 
 依次学习 goroutine、channel、`select`、取消传播和同步原语：
 
-- [goroutine](../language/concurrency/goroutine/)
-- [channel](../language/concurrency/channel/)
-- [`context`](../standard-library/context/)
+- [goroutine](../fundamentals/concurrency/goroutine/)
+- [channel](../fundamentals/concurrency/channel/)
+- [`context`](../stdlib/context/)
 
 不要用 `time.Sleep` 作为正确性同步手段。优先使用 `WaitGroup`、channel 或 `context`，并用 `go test -race ./...` 检查数据竞争。
 

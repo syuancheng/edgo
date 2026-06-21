@@ -6,4 +6,4 @@ Go 的并发模型由 goroutine、channel 和同步原语共同组成。Channel 
 
 - [Goroutine](./goroutine/)
 - [Channel](./channel/)
-- [`context` 示例](../../standard-library/context/)
+- [`context` 示例](../../stdlib/context/)
