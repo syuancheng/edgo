@@ -1,0 +1,11 @@
+@baseUrl = http://localhost:8080
+@token = replace-with-local-development-token
+
+### 查询条目详情
+POST {{baseUrl}}/api/v1/items/detail
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "ids": [10001, 10002]
+}

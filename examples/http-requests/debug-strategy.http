@@ -1,0 +1,7 @@
+@baseUrl = http://localhost:8080
+@country = SG
+@instance = example_strategy
+
+### 查询调试策略
+GET {{baseUrl}}/v1/debug-strategy?instance={{instance}}&country={{country}}&limit=20
+Accept: application/json
